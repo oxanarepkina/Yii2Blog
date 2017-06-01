@@ -12,7 +12,7 @@ class m170531_123019_create_groups_table extends Migration
      */
     public function up()
     {
-        $this->createTable('groups_test', [
+        $this->createTable('groups', [
             'id' => $this->primaryKey(),
             'username' => $this->string(255)->notNull()->unique(),
             'activity' => "ENUM('active', 'inactive')"
@@ -24,6 +24,6 @@ class m170531_123019_create_groups_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('groups_test');
+        $this->dropTable('groups');
     }
 }
